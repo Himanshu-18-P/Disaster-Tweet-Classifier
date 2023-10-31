@@ -8,6 +8,10 @@ try:
     stopwords.words('english')
 except LookupError:
     nltk.download('stopwords')
+try:
+    nltk.data.find('tokenizers/punkt')
+except LookupError:
+    nltk.download('punkt')
 from nltk.stem.porter import PorterStemmer
 ps = PorterStemmer()
 
